@@ -46,11 +46,16 @@ a{
     font-size: 20px;
 }
 
-.contact-1{
+.contact-1 {
     background-color: #099A68;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 10px;
+    
 }
+
+
+
+
 
 .custom-h2{
     font-size: 40px;
@@ -60,16 +65,23 @@ a{
 .custom-h1{
     font-size: 80px;
     font-family: "Rubik", sans-serif;
+
+    color: #152731;
+}
+
+.custom-alain{
+    color: #099A68;
+    font-family:"Rubik", sans-serif ;
 }
 
 
 .maphoto-1{
     width: 50%;
     height: auto;
-    margin-right: 80px;
+    margin-right: 90px;
 }
 .container{
-    margin-top: 30px;
+    margin-top: 50px;
 
 }
 
@@ -89,10 +101,162 @@ a{
     color: white;
     background-color: #099A68;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-left: 100px;
 
 }
+
+
+.custom-apropos {
+    font-size: 50px;
+    color: #099A68;
+    font-family:"Rubik", sans-serif  ;
+}
+
+
+.img-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maphoto-2{
+    width: 30%;
+    height: auto;
+}
+
+
+.div-download{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-cv{
+    text-decoration: none;
+    text-align: center;
+    background-color:#099A68;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.custom-skills{
+   color: #099A68;
+   font-size: 50px;
+   font-weight: bold;
+   font-family:"Rubik", sans-serif ;
+}
+
+
+.custom-skills-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.Front{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    box-shadow: 5px 10px 30px rgb(168, 167, 167);
+    padding: 50px;
+    margin-right: 80px;
+}
+
+.Front p{
+    color: #585858;
+}
+
+.Back p{
+    color: #585858;
+}
+
+
+.Back{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    box-shadow: 5px 10px 30px rgb(168, 167, 167);
+    padding: 50px;
+    margin-left: 80px;
+}
+
+
+.svg{
+    width: 30px;
+    height: 30px;
+}
+
+
+.UI-UX{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    box-shadow: 5px 10px 30px rgb(168, 167, 167);
+    padding: 50px;
+    margin-right: 80px;
+}
+
+.UI-UX p{
+    color: #585858;
+}
+
+
+.Framework{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    box-shadow: 5px 10px 30px rgb(168, 167, 167);
+    padding: 50px;
+    margin-left: 80px;
+}
+
+.Framework p{
+    color: #585858;
+}
+
+.text-frame{
+    color: #152731;
+}
+
+.custom-realisations{
+    color: #099A68;
+    font-family:"Rubik", sans-serif ;
+    margin-top: 100px;
+}
+
+.custom-foot{
+    background-color: #152731;
+    padding: 50px;
+    
+
+}
+
+.foot-foot{
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navigation{
+    color: white;
+    margin-right: 250px;
+}
+
+.cont-me{
+    color: white;
+    margin-left: 200px;
+}
+
+.fou{
+    margin-right: 120px;
+}
+
+.four{
+    margin-left: 120px;
+}
+
+
 
 
 
