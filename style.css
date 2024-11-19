@@ -226,7 +226,7 @@ a{
 
 .custom-foot{
     background-color: #152731;
-    padding: 50px;
+    padding: 10px;
     
 
 }
@@ -236,27 +236,107 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+}
+
+.foot-foot p{
+    margin-left: 150px;
+}
+.foot-foot p{
+    margin-right: 150px;
+    margin-top: 50px;
+}
+
+
+.foot-foot a{
+    
+    margin-left: 80px;
+    color: white;
+}
+.foot-foot a{
+    margin-right: 230px;
+}
+
+.foot-foot ul{
+    margin-top: 30px;
 }
 
 .navigation{
     color: white;
-    margin-right: 250px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .cont-me{
     color: white;
-    margin-left: 200px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
-.fou{
-    margin-right: 120px;
+.fou a{
+    text-decoration: none;
 }
 
-.four{
-    margin-left: 120px;
+.four ul li a{
+    text-decoration: none;
 }
 
+.four ul{
+    list-style-type: none;
+}
 
+.four {
+    color: #099A68;
+}
+
+.svgs{
+    width: 20px;
+    height: 20px;
+}
+
+.cc{
+    color: white;
+    text-align: center;
+}
+
+.custom-reseaux{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.custom-reseaux a{
+    margin-left: 20px;
+}
+
+.custom-suivez{
+    color: white;
+    margin-top: 20px;
+}
+
+.custom-reseaux ul{
+    display: flex;
+}
+
+.cus-cus{
+    background-color: #099A68;
+    padding: 20px;
+}
+
+.cus-cus a{
+    text-decoration: none;
+}
+ .cus-cus ul li{
+    text-align: center;
+    list-style-type: none;
+    margin: 30px;
+ }
+
+.cus-cus a{
+
+    color: white;
+}
 
 
 
