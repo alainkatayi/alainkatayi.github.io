@@ -47,9 +47,11 @@ a{
 }
 
 .contact-1 {
-    background-color: #099A68;
+    border-color: #099A68;
+    border-width:2px;
     padding: 15px;
     border-radius: 10px;
+    border-style: solid;
     
 }
 
@@ -60,6 +62,7 @@ a{
 .custom-h2{
     font-size: 40px;
     font-family: "Host Grotesk", sans-serif;
+    color: #099A68;
 }
 
 .custom-h1{
@@ -111,6 +114,7 @@ a{
     font-size: 50px;
     color: #099A68;
     font-family:"Rubik", sans-serif  ;
+    font-weight: bold;
 }
 
 
@@ -142,11 +146,12 @@ a{
     margin-top: 30px;
 }
 
-.custom-skills{
-   color: #099A68;
-   font-size: 50px;
-   font-weight: bold;
-   font-family:"Rubik", sans-serif ;
+
+.h-skills{
+    font-size: 50px;
+    font-weight: bold;
+    font-family:"Rubik", sans-serif ;
+    color: #099A68;
 }
 
 
@@ -167,10 +172,12 @@ a{
 
 .Front p{
     color: #585858;
+    margin-top: 25px;
 }
 
 .Back p{
     color: #585858;
+    margin-top: 25px;
 }
 
 
@@ -188,6 +195,11 @@ a{
     height: 30px;
 }
 
+.svg-django{
+    width: 80px;
+    height: 80px;
+}
+
 
 .UI-UX{
     background-color: rgb(255, 255, 255);
@@ -199,6 +211,7 @@ a{
 
 .UI-UX p{
     color: #585858;
+    margin-top: 25px;
 }
 
 
@@ -212,16 +225,32 @@ a{
 
 .Framework p{
     color: #585858;
+    margin-top: 25px;
 }
 
 .text-frame{
     color: #152731;
+    font-weight: bold;
+}
+
+.text-ui{
+    font-weight: bold;
+}
+
+.text-back{
+    font-weight: bold;
+    color: #152731;
+}
+
+.text-front{
+    font-weight: bold;
 }
 
 .custom-realisations{
     color: #099A68;
     font-family:"Rubik", sans-serif ;
     margin-top: 100px;
+    font-weight: bold;
 }
 
 .custom-foot{
@@ -250,11 +279,11 @@ a{
 
 .foot-foot a{
     
-    margin-left: 80px;
+    margin-left: 150px;
     color: white;
 }
 .foot-foot a{
-    margin-right: 230px;
+    margin-right: 150px;
 }
 
 .foot-foot ul{
@@ -277,6 +306,14 @@ a{
     text-decoration: none;
 }
 
+.fou ul{
+    list-style-type: none;
+}
+
+.four li{
+    margin: 10px;
+}
+
 .four ul li a{
     text-decoration: none;
 }
@@ -295,7 +332,7 @@ a{
 }
 
 .cc{
-    color: white;
+    color: rgb(131, 128, 128);
     text-align: center;
 }
 
@@ -317,6 +354,7 @@ a{
 
 .custom-reseaux ul{
     display: flex;
+    list-style-type : none;
 }
 
 .cus-cus{
