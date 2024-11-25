@@ -23,10 +23,15 @@ a{
     padding: 0px;
 }
 
+
 .logo-linkedin2{
     height: 30px;
     height: 30px;
 }
+
+
+
+
 
 .logo-github2{
     height: 30px;
@@ -37,6 +42,7 @@ a{
     margin: 10px;
     margin-left: 20px;
 }
+
 
 .nav-right a{
     margin: 10px;
@@ -55,6 +61,11 @@ a{
     
 }
 
+.contact-1:hover{
+    background-color: #099A68;
+    color: white;
+}
+
 
 
 
@@ -63,11 +74,13 @@ a{
     font-size: 40px;
     font-family: "Host Grotesk", sans-serif;
     color: #099A68;
+    animation: bonjour-jesuis 3s;
 }
 
 .custom-h1{
     font-size: 80px;
     font-family: "Rubik", sans-serif;
+    animation: bonjour-jesuis 2s;
 
     color: #152731;
 }
@@ -82,6 +95,7 @@ a{
     width: 50%;
     height: auto;
     margin-right: 90px;
+    animation: photo 3s;
 }
 .container{
     margin-top: 50px;
@@ -107,6 +121,14 @@ a{
     border-radius: 10px;
     margin-left: 100px;
 
+}
+
+.contact-2:hover{
+    color: #099A68;
+    background-color: white;
+    border-color: #099A68;
+    border-width: 2px;
+    border-style:solid ;
 }
 
 
@@ -251,6 +273,7 @@ a{
     font-family:"Rubik", sans-serif ;
     margin-top: 100px;
     font-weight: bold;
+    font-size: 50px;
 }
 
 .custom-foot{
@@ -302,8 +325,19 @@ a{
     font-weight: bold;
 }
 
+.cg{
+    display: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .fou a{
     text-decoration: none;
+}
+
+.fou li{
+    margin: 10px;
 }
 
 .fou ul{
@@ -357,23 +391,56 @@ a{
     list-style-type : none;
 }
 
+
+
+
 .cus-cus{
-    background-color: #099A68;
-    padding: 20px;
+    background-color: #152731;
+    padding: 10px;
+    width: 400px;
+    height: 400px;
+    border-radius: 40px;
+    box-shadow: 5px 10px 30px rgb(168, 167, 167);
+
+    
+
 }
 
-.cus-cus a{
+.cu-cu a{
     text-decoration: none;
 }
- .cus-cus ul li{
-    text-align: center;
+ .cu-cu ul li{
+
     list-style-type: none;
-    margin: 30px;
+    margin: 50px;
+    margin-top: 70px;
  }
 
-.cus-cus a{
+.cu-cu a{
 
-    color: white;
+    color: rgb(255, 255, 255);
+}
+
+
+@keyframes photo{
+    from{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes bonjour-jesuis{
+    from{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 
@@ -393,10 +460,165 @@ a{
 
 
 
+@media screen and  (max-width:720px) {
+
+    .section-1{
+        margin: 0px;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+
+    .nav-left{
+        display: none;
+    }
+
+    .nav-right{
+        display: none;
+    }
+
+    .div-photo-bonjour{
+        display: block;
+        margin-left: 0px;
+        margin-top: 0px;
+
+    }
 
 
 
 
+    .maphoto-1{
+        width: 50%;
+        height: auto;
+        margin-left:150px;
+    }
+
+    .custom-h1{
+        text-align: center;
+    }
+
+    .custom-h2{
+        text-align: center;
+    }
+
+    .devel-1{
+        text-align: center;
+    }
+    .contact-2{
+        margin-left: 0px;
+    }
+    .vcc{
+        text-align: center;
+    }
+
+    .custom-skills-2{
+        display: block;
+        align-items: center;
+    }
+
+    .h-skills{
+        text-align: center;
+    }
+
+    .Front{
+        padding: 30px;
+        margin-right: 0px;
+        margin-top: 50px;
+    }
+    
+    .Front p{
+        color: #585858;
+        margin-top: 10px;
+    }
+    
+    .Back p{
+        color: #585858;
+        margin-top: 10px;
+    }
+    
+    
+    .Back{
+        margin-top: 50px;
+        padding: 30px;
+        margin-left: 0px;
+    }
+
+
+    .UI-UX{
+        background-color: rgb(255, 255, 255);
+        border-radius: 50px;
+        box-shadow: 5px 10px 30px rgb(168, 167, 167);
+        padding: 50px;
+        margin-right: 0px;
+    }
+    
+    .UI-UX p{
+        color: #585858;
+        margin-top: 10px;
+    }
+    
+    
+    .Framework{
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+    
+    .Framework p{
+        color: #585858;
+        margin-top: 10px;
+    }
+
+    
+    .foot-foot{
+    display:block;
+    flex-direction: row;
+    justify-content: center;
+    }
+
+
+    .foot-foot p{
+        margin-left: 0px;
+        text-align: center;
+    }
+    .foot-foot p{
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+    
+    
+    .foot-foot a{
+        text-align: center;
+        margin-left: 0px;
+        color: white;
+    }
+    .foot-foot a{
+        margin-right: 0px;
+    }
+    
+    .foot-foot ul{
+        margin-top: 0px;
+    }
+
+    .cg{
+        display: block;
+    }
+
+    .navigation{
+        display: none;
+    }
+
+    .cont-me{
+        display: none;
+    }
+
+    .containe{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(15, 15, 15);
+        padding-bottom: 20px;
+    
+    }
+}
 
 
 
