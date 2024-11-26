@@ -9,6 +9,7 @@ a{
 }
 
 
+
 .sectionone{
     display: none;
 }
@@ -233,6 +234,10 @@ a{
     justify-content: center;
 }
 
+.custom-foot{
+    position: relative;
+    top: 180px;
+}
 
 .Front{
     background-color: rgb(255, 255, 255);
@@ -554,7 +559,9 @@ a{
 
     .section-1{
         margin: 20px;
-        border-radius: 50px;
+        border-radius: 0px;
+        margin: 0px;
+        box-shadow: none;
     }
 
 
@@ -574,21 +581,10 @@ a{
     .div-photo-bonjour{
         display: block;
         margin-left: 0px;
-        margin-top: 0px;
+        margin-top: 50px;
 
     }
 
-
-
-
-
-
-
-
-    .div-photo-bonjour img {
-        width: 300px;
-        height: 300px;
-    }
 
     .maphotot{
         display: none;
@@ -982,10 +978,21 @@ a{
 
 @media screen and (max-width:418px){
     .maphoto-1{
-        width: 100px;
-        height: 100px;
+        width: 50%;
+        height: auto;
     }
 }
+
+@media screen and (max-width:447px){
+    .maphoto-1{
+        width: 60%;
+        height: auto;
+        position: relative;
+        left:20% ;
+    }
+}
+
+
 
 
 
