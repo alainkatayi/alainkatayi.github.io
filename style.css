@@ -45,6 +45,10 @@ a{
     margin-top: 20px;
 }
 
+.maphotot{
+    display: none;
+}
+
 
 .logo-right{
     display: flex;
@@ -501,28 +505,56 @@ a{
 
 
 
-
+@media screen and (max-width:1034px){
+    .contact-2{
+        margin-left: 0px;
+    }
+}
 
 @media screen and (max-width:414px){
 
     .maphoto-1{
-        width: 100px;
-        height: 100px;
-        margin-left:0px;
+       
+        width: 200px;
+        height: 200px;
     }
+
+    .maphoto-2{
+        width: 200px;
+        height: 200px;
+    }
+
+
+
 
 }
 
 
+@media screen and (max-width:836px){
+    .maphoto-1{
+        width: 200px;
+        height: 200px;
+        left: 0%;
+    }
+}
+
+
+
+@media screen and (max-width:700px){
+    .maphoto-1{
+        position: relative;
+        left: 10%;
+        width: 20px;
+    }
+}
 
 
 
 @media screen and  (max-width:720px) {
 
     .section-1{
-        margin: 0px;
-        border-radius: 0px;
-        box-shadow: none;
+        margin: 20px;
+        border-radius: 50px;
     }
 
 
@@ -549,10 +581,22 @@ a{
 
 
 
-    .maphoto-1{
+
+
+
+
+    .div-photo-bonjour img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .maphotot{
+        display: none;
+    }
+
+
+    .maphoto-2{
         width: 50%;
-        height: auto;
-        margin-left:150px;
     }
 
     .custom-h1{
@@ -568,6 +612,14 @@ a{
     }
     .contact-2{
         margin-left: 0px;
+    }
+
+
+
+
+
+    .vv{
+        text-align: center;
     }
     .vcc{
         text-align: center;
@@ -641,6 +693,7 @@ a{
     .foot-foot p{
         margin-left: 0px;
         text-align: center;
+        padding: 20px;
     }
     .foot-foot p{
         margin-right: 0px;
@@ -662,7 +715,7 @@ a{
     }
 
     .cg{
-        display: block;
+        display: none;
     }
 
     .navigation{
@@ -674,7 +727,7 @@ a{
     }
 
     .fou{
-        text-align: center;
+        display: none;
     }
 
     .four{
@@ -727,6 +780,216 @@ a{
     }
 
     }
+
+
+    @media screen and (max-width:1034px){
+        .div-photo-bonjour{
+            display: block;
+        }
+
+        .custom-h2{
+            text-align: center;
+        }
+
+        .custom-h1{
+            text-align: center;
+        }
+
+
+        .devel-1{
+            text-align: center;
+        }
+
+        .contact-2{
+            position: relative;
+            
+        }
+
+        .vv{
+            text-align: center;
+        }
+
+        .maphoto-1{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            left: 30%;
+        }
+
+
+        .Front{
+
+            margin-right: 10px;
+        }
+        .Back{
+
+            margin-left: 10px;
+        }
+        .UI-UX{
+
+            margin-right: 10px;
+        }
+        .Framework{
+
+            margin-left: 10px;
+        }
+
+    }
+
+@media screen and (max-width:990px){
+    .custom-skills-2{
+        display: block;
+    }
+
+    .Back{
+        margin-top: 50px;
+    }
+
+    .Framework{
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width:964px){
+    .foot-foot{
+        display: block;
+    }
+
+    .cg{
+        display: block;
+        text-align: center;
+    }
+
+    .navigation{
+        display: none;
+    }
+    .cont-me{
+        display: none;
+    }
+
+    .nav-left{
+        display: none;
+    }
+
+    .nav-right{
+        display: none;
+    }
+
+    .sectionone{
+        display: block;
+    }
+
+    .menu-burger{
+        
+        width: 40px;
+        height: 40px;
+        margin-left: 40px;
+        margin-top:20px;
+    }
+    
+    .logo-linkedin{
+        
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+    }
+    
+    .logo-github{
+        
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+    }
+    
+    
+    .logo-right{
+        display: flex;
+        gap: 15px;
+        margin-right: 50px;
+    }
+
+    
+    .fou{
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .four{
+        text-align: center;
+    }
+
+    .fou a{
+        margin-top: 20px;
+    }
+    
+}
+
+
+@media screen and (max-width:960px){
+    .fou{
+        display: none;
+    }
+}
+
+@media screen and (max-width:598px){
+    .maphoto-1{
+        position: relative;
+        left: 5px;
+    }
+}
+@media screen and (max-width:824px){
+    .maphoto-1{
+        position: relative;
+        left: 25%;
+    }
+}
+
+@media screen and (max-width:548px){
+    .maphoto-1{
+        left: 50px;
+    }
+}
+
+
+@media screen and (max-width:504px){
+    .maphoto-1{
+        left: 30px;
+    }
+}
+
+
+@media screen and (max-width:448px){
+    .maphoto-1{
+        left: 0px;
+    }
+}
+
+@media screen and (max-width:450px){
+
+    .section-1{
+        margin: 0px;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+
+
+    .maphoto-1{
+        left: 10px;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width:418px){
+    .maphoto-1{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+
 
 
 
