@@ -8,6 +8,33 @@ a{
     text-decoration: none;
 }
 
+.menu-deroulant ul li{
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+}
+
+.menu-deroulant{
+    background-color: #152731;
+}
+
+
+
+.menu-deroulant a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+.menu-deroulant p{
+    color: white;
+    text-align: center;
+}
+
+
+.menu-deroulant{
+    display: none;
+}
 
 
 .sectionone{
@@ -51,11 +78,16 @@ a{
 }
 
 
-.logo-right{
-    display: flex;
-    gap: 15px;
-    margin-right: 20px;
+.logo-right ul li{
+    list-style-type: none;
+
 }
+
+.logo-right a{
+    text-decoration: none;
+}
+
+
 
 
 
@@ -444,12 +476,17 @@ a{
 .custom-reseaux ul{
     display: flex;
     list-style-type : none;
+
 }
 
 
 
 
 .cus-cus{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background-color: #152731;
     padding: 10px;
     width: 400px;
@@ -457,18 +494,25 @@ a{
     border-radius: 40px;
     box-shadow: 5px 10px 30px rgb(168, 167, 167);
 
-    
-
 }
+
+
 
 .cu-cu a{
     text-decoration: none;
 }
  .cu-cu ul li{
-
     list-style-type: none;
     margin: 50px;
     margin-top: 70px;
+    text-align: center;
+ }
+
+ .cu-cu ul{
+    margin: 50px;
+    padding: 30px;
+    background-color: #152731;
+    border-radius: 20px;
  }
 
 .cu-cu a{
@@ -503,7 +547,13 @@ a{
 
 
 
-
+@media screen and (max-width:474px){
+    .cu-cu ul{
+        padding: 10px;
+        margin: 10px;
+        margin-top: 50px;
+    }
+}
 
 
 
@@ -769,11 +819,7 @@ a{
     }
     
     
-    .logo-right{
-        display: flex;
-        gap: 15px;
-        margin-right: 20px;
-    }
+  
 
     }
 
