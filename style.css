@@ -16,6 +16,7 @@ a{
 
 .menu-deroulant{
     background-color: #152731;
+    box-shadow: 5px 10px 30px rgb(168, 167, 167);
 }
 
 
@@ -135,6 +136,11 @@ a{
     font-size: 20px;
 }
 
+
+.nav-right a:hover{
+    color: #099A68;
+}
+
 .contact-1 {
     border-color: #099A68;
     border-width:2px;
@@ -144,10 +150,21 @@ a{
     
 }
 
+.contact-1{
+    transition:  .3s ;
+}
+
 .contact-1:hover{
-    background-color: #099A68;
+    transform: scale(1.1);
+}
+
+.contact-1:hover{
+    background-color: #152731;
+    border-color:#152731;
     color: white;
 }
+
+
 
 
 
@@ -212,6 +229,16 @@ a{
     border-color: #099A68;
     border-width: 2px;
     border-style:solid ;
+}
+
+
+.contact-2{
+    transition:  .3s ;
+
+}
+
+.contact-2:hover{
+    transform: scale(1.1);
 }
 
 
