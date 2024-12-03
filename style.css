@@ -16,7 +16,7 @@ a{
 
 .menu-deroulant{
     background-color: #152731;
-    box-shadow: 5px 10px 30px rgb(168, 167, 167);
+    
 }
 
 
@@ -818,7 +818,7 @@ a{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color:none;
+        background-color: none;
         padding-bottom: 20px;
     
     }

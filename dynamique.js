@@ -3,7 +3,6 @@ menu.addEventListener('click', Derouler);
 
 function Derouler(){
     document.getElementById("menu-deroulant").style.display = "block";
-    document.getElementById('burger').style.display = "none";
 }
 
 var fermer = document.getElementById("fermer");
