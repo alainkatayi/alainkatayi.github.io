@@ -412,7 +412,6 @@ a{
 }
 
 
-
 .imgrea1{
 
     display: flex;
@@ -1092,6 +1091,30 @@ a{
         position: relative;
         left:20% ;
     }
+}
+
+
+@media screen and (max-width:994px){
+    .imgrea1{
+        display: block;
+    }
+
+    
+.rea1{
+    width: 100%;
+    height: 100%;
+
+
+    
+}
+.rea2{
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-top: 50px;
+
+
+}
 }
 
 
