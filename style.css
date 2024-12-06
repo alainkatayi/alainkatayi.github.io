@@ -390,6 +390,35 @@ a{
     font-size: 50px;
 }
 
+.rea1{
+    width: 50%;
+    height: 50%;
+    background-color: #a36002;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 30px rgb(168, 167, 167);
+
+    
+}
+.rea2{
+    width: 50%;
+    height: 50%;
+    background-color: #061c3b;
+    padding: 20px;
+    margin-left: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 30px rgb(168, 167, 167);
+
+}
+
+
+
+.imgrea1{
+
+    display: flex;
+    margin-top: 50px;
+}
+
 .custom-foot{
     background-color: #152731;
     padding: 10px;
