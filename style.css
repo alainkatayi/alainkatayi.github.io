@@ -166,8 +166,8 @@ a{
 }
 
 .maphoto-1{
-    width: 50%;
-    height: auto;
+    width: 350px;
+    height: 350px;
     margin-right: 90px;
     animation: photo 3s;
 }
@@ -193,6 +193,7 @@ a{
     padding: 15px;
     border-radius: 10px;
     margin-left: 100px;
+
 }
 
 .contact-2:hover{
@@ -201,6 +202,7 @@ a{
     border-color: #099A68;
     border-width: 2px;
     border-style:solid ;
+    
 }
 
 .contact-2{
@@ -471,7 +473,7 @@ a{
 
 .four {
     color: #099A68;
-    
+
 }
 
 .svgs{
@@ -775,7 +777,7 @@ a{
 
 
     .maphoto-1{
-        width: 50%;
+        width: 300px;
     }
 
     .maphotot{
