@@ -46,6 +46,42 @@ a{
 
 }
 
+.menu{
+    position: fixed;
+    left: -100%;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+    background-color:#152731f8;
+    z-index: 100;
+    transition: left 0.3s ease-in-out;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu ul{
+    list-style: none;
+    text-align: center;
+    margin-top: 50%;
+}
+
+.menu li{
+    margin: 20px;
+
+}
+
+.menu.active{
+    left: 0%;
+}
+
 .menu-burger{
     width: 40px;
     height: 40px;
