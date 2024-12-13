@@ -1003,9 +1003,9 @@ a{
     
     
     .maphoto-1{
-        left: 10px;
-        width: 100px;
-        height: 100px;
+        left: 15%;
+        width: 250px;
+        height: 250px;
         }
     }
 
@@ -1018,20 +1018,33 @@ a{
 
     @media screen and (max-width:447px){
         .maphoto-1{
-            width: 60%;
-            height: auto;
-            position: relative;
-            left:20% ;
+
+            left: 15%;
+            width: 250px;
+            height: 250px;
+
         }
     
     }
 
+
+
+
+@media screen and (max-width:418px){
+    .maphoto-1{
+        width: 50%;
+        height: auto;
+    }
+}
+
+
 @media screen and (max-width:414px){
 
     .maphoto-1{
-       
-        width: 200px;
-        height: 200px;
+        left: 10%;
+        width: 250px;
+        height: 250px;
+
     }
 
     .maphoto-2{
@@ -1040,11 +1053,19 @@ a{
     }
 }
 
-
-@media screen and (max-width:418px){
+@media screen and (max-width: 412px){
     .maphoto-1{
-        width: 50%;
-        height: auto;
+        left: 10%;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width:360px){
+    .maphoto-1{
+        left: 10%;
+        width: 220px;
+        height: 220px;
     }
 }
 
