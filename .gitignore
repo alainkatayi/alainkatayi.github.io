@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 /bazel-out
+/.gh-pages-deploy
+/_node_modules_old_unused
+/node_modules_old
 
 # Node
 /node_modules

@@ -1,12 +1,43 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { AboutComponent } from './components/about.component';
+import { ContactComponent } from './components/contact.component';
+import { FooterComponent } from './components/footer.component';
+import { HeroComponent } from './components/hero.component';
+import { NavbarComponent } from './components/navbar.component';
+import { PhilosophyComponent } from './components/philosophy.component';
+import { ProjectsComponent } from './components/projects.component';
+import { StarfieldComponent } from './components/starfield.component';
+import { TechStackComponent } from './components/tech-stack.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [
+    StarfieldComponent,
+    NavbarComponent,
+    HeroComponent,
+    AboutComponent,
+    TechStackComponent,
+    ProjectsComponent,
+    PhilosophyComponent,
+    ContactComponent,
+    FooterComponent,
+  ],
+  template: `
+    <div class="relative min-h-screen">
+      <app-starfield />
+      <app-navbar />
+      <main>
+        <app-hero />
+        <app-about />
+        <app-tech-stack />
+        <app-projects />
+        <app-philosophy />
+        <app-contact />
+      </main>
+      <app-footer />
+    </div>
+  `,
+  styles: [],
 })
-export class AppComponent {
-  title = 'my-portfolio';
-}
+export class AppComponent {}
