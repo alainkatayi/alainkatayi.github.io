@@ -1,6 +1,6 @@
-# Alain Katayi — Portfolio
+﻿# Alain Katayi — Portfolio
 
-Angular portfolio (FinTech / System Design), published at [alainkatayi.github.io](https://alainkatayi.github.io/).
+Angular portfolio (FinTech / System Design), live at [alainkatayi.github.io](https://alainkatayi.github.io/).
 
 ## Develop
 
@@ -9,18 +9,18 @@ npm install
 npm start
 ```
 
-App runs on `http://localhost:4201/`.
+Runs on `http://localhost:4201/`.
 
-## Build & publish (GitHub Pages)
+## Publish
 
-The live site is served from the `docs/` folder on `main`.
+User GitHub Pages sites are served from the **repository root**. After building, copy `dist/my-portfolio/browser/*` to the repo root (keep `.nojekyll`), then commit and push `main`.
 
 ```bash
 ng build --configuration=production --base-href=/
-# copy dist/my-portfolio/browser/* into docs/, keep docs/.nojekyll
-git add docs
-git commit -m "Update GitHub Pages build"
-git push
+# copy dist/my-portfolio/browser/* to repo root + .nojekyll + 404.html
+git add -A
+git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "Update site build"
+git push origin main
 ```
 
 Repo: https://github.com/alainkatayi/alainkatayi.github.io
