@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LucideMail, LucideMapPin, LucidePhone } from '@lucide/angular';
 import { profile } from '../data/profile';
 import { RevealDirective } from '../directives/reveal.directive';
+import { I18nService } from '../services/i18n.service';
 import { SectionHeadingComponent } from './ui/section-heading.component';
 import { SocialIconComponent } from './ui/social-icon.component';
 
@@ -20,13 +21,13 @@ import { SocialIconComponent } from './ui/social-icon.component';
     <section id="contact" class="scroll-mt-24 border-t border-slate-200 py-20 dark:border-slate-800">
       <div class="mx-auto max-w-6xl px-6 lg:px-8">
         <app-section-heading
-          eyebrow="Contact"
-          title="Let's build resilient financial systems"
-          description="Open to FinTech and software engineering roles where system design, API architecture, and banking backend stability are first-class concerns."
+          [eyebrow]="i18n.copy().contact.eyebrow"
+          [title]="i18n.copy().contact.title"
+          [description]="i18n.copy().contact.description"
         />
 
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          @for (item of contacts; track item.label; let i = $index) {
+          @for (item of contacts; track item.key; let i = $index) {
             <div appReveal [appRevealDelay]="i * 50">
               @if (item.href; as href) {
                 <a
@@ -93,36 +94,46 @@ import { SocialIconComponent } from './ui/social-icon.component';
   `,
 })
 export class ContactComponent {
-  readonly contacts = [
-    {
-      label: 'Location',
-      value: profile.location,
-      href: null as string | null,
-      icon: 'map' as const,
-    },
-    {
-      label: 'Email',
-      value: profile.email,
-      href: `mailto:${profile.email}`,
-      icon: 'mail' as const,
-    },
-    {
-      label: 'Phone',
-      value: profile.phone,
-      href: `tel:${profile.phone.replace(/\s+/g, '')}`,
-      icon: 'phone' as const,
-    },
-    {
-      label: 'LinkedIn',
-      value: 'linkedin.com/in/alain-katayi',
-      href: profile.linkedin,
-      icon: 'linkedin' as const,
-    },
-    {
-      label: 'GitHub',
-      value: 'github.com/alainkatayi',
-      href: profile.github,
-      icon: 'github' as const,
-    },
-  ];
+  readonly i18n = inject(I18nService);
+
+  get contacts() {
+    const c = this.i18n.copy().contact;
+    return [
+      {
+        key: 'location',
+        label: c.location,
+        value: c.locationValue,
+        href: null as string | null,
+        icon: 'map' as const,
+      },
+      {
+        key: 'email',
+        label: c.email,
+        value: profile.email,
+        href: `mailto:${profile.email}`,
+        icon: 'mail' as const,
+      },
+      {
+        key: 'phone',
+        label: c.phone,
+        value: profile.phone,
+        href: `tel:${profile.phone.replace(/\s+/g, '')}`,
+        icon: 'phone' as const,
+      },
+      {
+        key: 'linkedin',
+        label: c.linkedin,
+        value: 'linkedin.com/in/alain-katayi',
+        href: profile.linkedin,
+        icon: 'linkedin' as const,
+      },
+      {
+        key: 'github',
+        label: c.github,
+        value: 'github.com/alainkatayi',
+        href: profile.github,
+        icon: 'github' as const,
+      },
+    ];
+  }
 }

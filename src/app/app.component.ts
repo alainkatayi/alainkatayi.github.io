@@ -3,6 +3,7 @@ import { AboutComponent } from './components/about.component';
 import { ContactComponent } from './components/contact.component';
 import { FooterComponent } from './components/footer.component';
 import { HeroComponent } from './components/hero.component';
+import { LanguageFabComponent } from './components/language-fab.component';
 import { NavbarComponent } from './components/navbar.component';
 import { PhilosophyComponent } from './components/philosophy.component';
 import { ProjectsComponent } from './components/projects.component';
@@ -22,6 +23,7 @@ import { TechStackComponent } from './components/tech-stack.component';
     PhilosophyComponent,
     ContactComponent,
     FooterComponent,
+    LanguageFabComponent,
   ],
   template: `
     <div class="relative min-h-screen">
@@ -36,6 +38,7 @@ import { TechStackComponent } from './components/tech-stack.component';
         <app-contact />
       </main>
       <app-footer />
+      <app-language-fab />
     </div>
   `,
   styles: [],

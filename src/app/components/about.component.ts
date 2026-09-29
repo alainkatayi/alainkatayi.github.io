@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { profile } from '../data/profile';
+import { Component, inject } from '@angular/core';
 import { RevealDirective } from '../directives/reveal.directive';
+import { I18nService } from '../services/i18n.service';
 import { SectionHeadingComponent } from './ui/section-heading.component';
 
 @Component({
@@ -11,13 +11,13 @@ import { SectionHeadingComponent } from './ui/section-heading.component';
     <section id="about" class="scroll-mt-24 border-t border-slate-200 py-20 dark:border-slate-800">
       <div class="mx-auto max-w-6xl px-6 lg:px-8">
         <app-section-heading
-          eyebrow="About"
-          title="Engineering mindset first. Frameworks second."
-          description="I build systems for financial products where correctness, observability, and API clarity matter as much as delivery speed."
+          [eyebrow]="i18n.copy().about.eyebrow"
+          [title]="i18n.copy().about.title"
+          [description]="i18n.copy().about.description"
         />
 
         <div class="grid gap-6 lg:grid-cols-3">
-          @for (paragraph of profile.about; track paragraph; let i = $index) {
+          @for (paragraph of i18n.copy().about.paragraphs; track paragraph; let i = $index) {
             <article
               class="rounded-2xl border border-slate-200 bg-white/70 p-6 dark:border-slate-800 dark:bg-white/[0.03]"
               appReveal
@@ -34,5 +34,5 @@ import { SectionHeadingComponent } from './ui/section-heading.component';
   `,
 })
 export class AboutComponent {
-  readonly profile = profile;
+  readonly i18n = inject(I18nService);
 }

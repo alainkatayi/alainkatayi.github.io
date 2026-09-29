@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { LucideTerminal } from '@lucide/angular';
 import { philosophyTabs } from '../data/philosophy';
+import { I18nService } from '../services/i18n.service';
 import { SectionHeadingComponent } from './ui/section-heading.component';
 
 @Component({
@@ -12,9 +13,9 @@ import { SectionHeadingComponent } from './ui/section-heading.component';
     <section class="border-t border-slate-200 py-20 dark:border-slate-800">
       <div class="mx-auto max-w-6xl px-6 lg:px-8">
         <app-section-heading
-          eyebrow="Philosophy"
-          title="How I think about reliable software"
-          description="A compact terminal view into the principles that guide architecture decisions in high-stakes FinTech systems."
+          [eyebrow]="i18n.copy().philosophy.eyebrow"
+          [title]="i18n.copy().philosophy.title"
+          [description]="i18n.copy().philosophy.description"
         />
 
         <div
@@ -41,7 +42,7 @@ import { SectionHeadingComponent } from './ui/section-heading.component';
                   "
                   (click)="activeId = tab.id"
                 >
-                  {{ tab.label }}
+                  {{ i18n.copy().philosophy.tabs[tab.id].label }}
                 </button>
               }
             </div>
@@ -51,7 +52,7 @@ import { SectionHeadingComponent } from './ui/section-heading.component';
             <p class="mb-4 font-mono text-xs text-accent-soft">$ {{ active.prompt }}</p>
             <pre
               class="overflow-x-auto whitespace-pre-wrap font-mono text-sm leading-7 text-slate-300 transition-opacity duration-250"
-            >{{ active.lines.join('\n') }}</pre>
+            >{{ i18n.copy().philosophy.tabs[active.id].lines.join('\n') }}</pre>
           </div>
         </div>
       </div>
@@ -60,6 +61,7 @@ import { SectionHeadingComponent } from './ui/section-heading.component';
 })
 export class PhilosophyComponent {
   readonly philosophyTabs = philosophyTabs;
+  readonly i18n = inject(I18nService);
   activeId = philosophyTabs[0].id;
 
   get active() {

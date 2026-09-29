@@ -1,7 +1,8 @@
-import { Component, HostListener, OnDestroy } from '@angular/core';
+import { Component, HostListener, OnDestroy, inject } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { LucideCircleDot, LucideMenu, LucideX } from '@lucide/angular';
-import { navLinks, profile } from '../data/profile';
+import { profile } from '../data/profile';
+import { I18nService } from '../services/i18n.service';
 
 @Component({
   selector: 'app-navbar',
@@ -46,14 +47,14 @@ import { navLinks, profile } from '../data/profile';
             class="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-3 py-1.5 text-xs font-medium text-accent-muted dark:text-accent-soft"
           >
             <svg lucideCircleDot [size]="14" class="shrink-0"></svg>
-            {{ profile.availability }}
+            {{ i18n.copy().availability }}
           </span>
         </div>
 
         <button
           type="button"
           class="inline-flex items-center justify-center rounded-xl border border-slate-200 p-2 text-slate-700 dark:border-slate-700 dark:text-slate-200 md:hidden"
-          [attr.aria-label]="open ? 'Close menu' : 'Open menu'"
+          [attr.aria-label]="open ? i18n.copy().nav.closeMenu : i18n.copy().nav.openMenu"
           (click)="toggleMenu()"
         >
           @if (open) {
@@ -82,7 +83,7 @@ import { navLinks, profile } from '../data/profile';
               class="mt-2 inline-flex items-center gap-2 rounded-xl border border-accent/20 bg-accent/10 px-3 py-3 text-xs font-medium text-accent-muted dark:text-accent-soft"
             >
               <svg lucideCircleDot [size]="14"></svg>
-              {{ profile.availability }}
+              {{ i18n.copy().availability }}
             </span>
           </nav>
         </div>
@@ -92,9 +93,19 @@ import { navLinks, profile } from '../data/profile';
 })
 export class NavbarComponent implements OnDestroy {
   readonly profile = profile;
-  readonly navLinks = navLinks;
+  readonly i18n = inject(I18nService);
   open = false;
   scrolled = false;
+
+  get navLinks() {
+    const nav = this.i18n.copy().nav;
+    return [
+      { href: '#about', label: nav.about },
+      { href: '#skills', label: nav.skills },
+      { href: '#projects', label: nav.projects },
+      { href: '#contact', label: nav.contact },
+    ];
+  }
 
   @HostListener('window:scroll')
   onScroll(): void {

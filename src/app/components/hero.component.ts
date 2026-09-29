@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LucideArrowDownRight, LucideMail } from '@lucide/angular';
 import { profile } from '../data/profile';
+import { I18nService } from '../services/i18n.service';
 import { ButtonComponent } from './ui/button.component';
 
 @Component({
@@ -21,26 +22,26 @@ import { ButtonComponent } from './ui/button.component';
             class="mb-5 animate-fade-up text-sm font-medium text-slate-500 dark:text-slate-400"
             style="animation-delay: 0ms"
           >
-            {{ profile.role }} | {{ profile.specialty }}
+            {{ i18n.copy().hero.role }} | {{ i18n.copy().hero.specialty }}
           </p>
 
           <h1
             class="animate-fade-up text-balance text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-[3.35rem] lg:leading-[1.1]"
             style="animation-delay: 80ms"
           >
-            {{ profile.headline }}
+            {{ i18n.copy().hero.headline }}
           </h1>
 
           <p
             class="mt-6 max-w-xl animate-fade-up text-lg leading-relaxed text-slate-600 dark:text-slate-400"
             style="animation-delay: 160ms"
           >
-            {{ profile.subheadline }}
+            {{ i18n.copy().hero.subheadline }}
           </p>
 
           <div class="mt-8 flex flex-wrap gap-3 animate-fade-up" style="animation-delay: 240ms">
-            <app-button className="cursor-pointer" (clicked)="scrollTo('architecture')">
-              Explore Architecture
+            <app-button className="cursor-pointer" (clicked)="scrollTo('projects')">
+              {{ i18n.copy().hero.viewProjects }}
               <svg lucideArrowDownRight [size]="16"></svg>
             </app-button>
             <app-button
@@ -48,7 +49,7 @@ import { ButtonComponent } from './ui/button.component';
               className="cursor-pointer"
               (clicked)="scrollTo('contact')"
             >
-              Get in Touch
+              {{ i18n.copy().hero.getInTouch }}
               <svg lucideMail [size]="16"></svg>
             </app-button>
           </div>
@@ -90,7 +91,7 @@ import { ButtonComponent } from './ui/button.component';
             <div class="relative aspect-[4/5] overflow-hidden bg-slate-100 dark:bg-slate-900">
               <img
                 src="/alain-katayi.jpg"
-                [alt]="profile.name + ', Software Engineer and System Designer'"
+                [alt]="profile.name + ', Software Engineer'"
                 class="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-[1.03]"
               />
               <div
@@ -105,7 +106,7 @@ import { ButtonComponent } from './ui/button.component';
               <span
                 class="rounded-lg border border-accent/20 bg-accent/10 px-2.5 py-1 text-[11px] font-semibold text-accent-muted dark:text-accent-soft"
               >
-                Systems
+                {{ i18n.copy().hero.systems }}
               </span>
             </div>
           </div>
@@ -116,11 +117,16 @@ import { ButtonComponent } from './ui/button.component';
 })
 export class HeroComponent {
   readonly profile = profile;
-  readonly meta = [
-    { label: 'Focus', value: 'System Design' },
-    { label: 'Domain', value: 'FinTech' },
-    { label: 'Based in', value: 'Kinshasa, RDC' },
-  ];
+  readonly i18n = inject(I18nService);
+
+  get meta() {
+    const hero = this.i18n.copy().hero;
+    return [
+      { label: hero.focus, value: hero.focusValue },
+      { label: hero.domain, value: hero.domainValue },
+      { label: hero.basedIn, value: hero.basedInValue },
+    ];
+  }
 
   scrollTo(id: string): void {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });

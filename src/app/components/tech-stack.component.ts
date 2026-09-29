@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { techCategories } from '../data/tech';
 import { RevealDirective } from '../directives/reveal.directive';
+import { I18nService } from '../services/i18n.service';
 import { BrandIconComponent } from './ui/brand-icon.component';
 import { CardComponent } from './ui/card.component';
 import { SectionHeadingComponent } from './ui/section-heading.component';
@@ -11,14 +12,14 @@ import { SectionHeadingComponent } from './ui/section-heading.component';
   imports: [SectionHeadingComponent, CardComponent, BrandIconComponent, RevealDirective],
   template: `
     <section
-      id="expertise"
+      id="skills"
       class="scroll-mt-24 border-t border-slate-200 py-20 dark:border-slate-800"
     >
       <div class="mx-auto max-w-6xl px-6 lg:px-8">
         <app-section-heading
-          eyebrow="Expertise"
-          title="Technical tools that serve robust system design"
-          description="Stack choices are secondary to architecture. These are the instruments I use to ship reliable FinTech and banking backends."
+          [eyebrow]="i18n.copy().skills.eyebrow"
+          [title]="i18n.copy().skills.title"
+          [description]="i18n.copy().skills.description"
         />
 
         <div class="grid gap-6 md:grid-cols-2">
@@ -26,10 +27,10 @@ import { SectionHeadingComponent } from './ui/section-heading.component';
             <div appReveal [appRevealDelay]="i * 70">
               <app-card className="h-full">
                 <h3 class="text-lg font-semibold text-slate-900 dark:text-white">
-                  {{ category.title }}
+                  {{ i18n.copy().skills.categories[category.id].title }}
                 </h3>
                 <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                  {{ category.description }}
+                  {{ i18n.copy().skills.categories[category.id].description }}
                 </p>
                 <ul class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   @for (item of category.items; track item.name) {
@@ -61,4 +62,5 @@ import { SectionHeadingComponent } from './ui/section-heading.component';
 })
 export class TechStackComponent {
   readonly techCategories = techCategories;
+  readonly i18n = inject(I18nService);
 }

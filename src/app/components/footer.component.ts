@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { LucideMoon, LucideSun } from '@lucide/angular';
 import { profile } from '../data/profile';
+import { I18nService } from '../services/i18n.service';
 import { ThemeService } from '../services/theme.service';
 
 @Component({
@@ -15,10 +16,10 @@ import { ThemeService } from '../services/theme.service';
         <div>
           <p class="text-sm font-semibold text-slate-900 dark:text-white">{{ profile.name }}</p>
           <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
-            {{ profile.role }} · Kinshasa, RDC
+            {{ i18n.copy().footer.tagline }}
           </p>
           <p class="mt-3 text-xs text-slate-500">
-            © {{ year }} Alain Katayi. Built for clarity, scale, and systems thinking.
+            © {{ year }} Alain Katayi. {{ i18n.copy().footer.copyright }}
           </p>
         </div>
 
@@ -50,7 +51,9 @@ import { ThemeService } from '../services/theme.service';
             type="button"
             class="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 transition-colors hover:border-accent/40 hover:text-accent dark:border-slate-700 dark:bg-white/5 dark:text-slate-200 dark:hover:text-accent-soft lg:ml-2"
             [attr.aria-label]="
-              themeService.theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+              themeService.theme() === 'dark'
+                ? i18n.copy().footer.lightMode
+                : i18n.copy().footer.darkMode
             "
             (click)="themeService.toggle()"
           >
@@ -68,5 +71,6 @@ import { ThemeService } from '../services/theme.service';
 export class FooterComponent {
   readonly profile = profile;
   readonly themeService = inject(ThemeService);
+  readonly i18n = inject(I18nService);
   readonly year = new Date().getFullYear();
 }
