@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AboutComponent } from './components/about.component';
 import { ContactComponent } from './components/contact.component';
+import { ContactNudgeComponent } from './components/contact-nudge.component';
 import { FooterComponent } from './components/footer.component';
 import { HeroComponent } from './components/hero.component';
 import { LanguageFabComponent } from './components/language-fab.component';
@@ -24,6 +25,7 @@ import { TechStackComponent } from './components/tech-stack.component';
     ContactComponent,
     FooterComponent,
     LanguageFabComponent,
+    ContactNudgeComponent,
   ],
   template: `
     <div class="relative min-h-screen">
@@ -39,6 +41,7 @@ import { TechStackComponent } from './components/tech-stack.component';
       </main>
       <app-footer />
       <app-language-fab />
+      <app-contact-nudge />
     </div>
   `,
   styles: [],
